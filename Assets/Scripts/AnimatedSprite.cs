@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(SpriteRenderer))]
 
-public class NewBehaviourScript : MonoBehaviour
+public class AnimatedSprite : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer { get; private set; }
 
@@ -10,10 +10,38 @@ public class NewBehaviourScript : MonoBehaviour
 
     public float animationTime = 0.25f;
     public int animationFrame { get; private set; }
-    public bool loop = true
+    public bool loop = true;
 
     private void Awake()
     {
         this.spriteRenderer = GetComponent<SpriteRenderer>();
+    }
+    private void Start()
+    {
+        InvokeRepeating(nameof(Advance), this.animationTime, this.animationTime);
+    }
+    private void Advance()
+    {
+        this.animationFrame++;
+
+        if (!this.spriteRenderer.enabled)
+        {
+            return;
+        }
+        if (this.animationFrame >= this.sprites.Length && this.loop)
+        {
+            this.animationFrame = 0;
+        }
+        if (this.animationFrame >= 0 && this.animationFrame < this.sprites.Length)
+        {
+            this.spriteRenderer.sprite = this.sprites[this.animationFrame];
+        }
+    }
+
+    public void Restart()
+    {
+        this.animationFrame = -1;
+
+        Advance();
     }
 }
