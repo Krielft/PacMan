@@ -3,18 +3,18 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Movement : MonoBehaviour
 {
-    [Header ("Speed")]
+    [Header ("SPEED :")]
     [Space]
     public float speed = 8.0f;
     [Range (0, 3)]
     public float speedMultiplier = 1.0f;
     
-    [Header ("Physics")]
+    [Header ("PHYSICS :")]
     [Space]
     public LayerMask obstacleLayer;
     public new Rigidbody2D rigidbody;
 
-    [Header ("VECTOR")]
+    [Header ("VECTOR :")]
     [Space]
     public Vector2 initialDirection;
     public Vector2 direction;

@@ -5,9 +5,10 @@ using UnityEngine;
 public class AnimatedSprite : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer { get; private set; }
-
     public Sprite[] sprites;
 
+    [Header("ANIMATION :")]
+    [Space]
     public float animationTime = 0.25f;
     public int animationFrame { get; private set; }
     public bool loop = true;
