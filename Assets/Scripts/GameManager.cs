@@ -6,9 +6,13 @@ public class GameManager : MonoBehaviour
     public GameObject pacman;
     public Transform pellets;
 
-    public int ghostMultiplier { get; private set; } = 1;
-    public int score { get; private set; }
-    public int lives { get; private set; }
+    public GameObject StartPosition;
+
+
+
+    public int ghostMultiplier = 1;
+    public int score;
+    public int lives;
 
     private void Start()
     {
@@ -44,6 +48,15 @@ public class GameManager : MonoBehaviour
             this.ghosts[i].gameObject.SetActive(true);
         }
         this.pacman.gameObject.SetActive(true);
+        FindObjectOfType<Pacman>().transform.position = new Vector2(0, -8.5f);
+
+        FindObjectOfType<Pacman>().transform.position = new Vector2(0, -8.5f);
+        FindObjectOfType<Pacman>().transform.position = new Vector2(0, -8.5f);
+        FindObjectOfType<Pacman>().transform.position = new Vector2(0, -8.5f);
+        FindObjectOfType<Pacman>().transform.position = new Vector2(0, -8.5f);
+
+
+        Debug.Log("Rejouer");
     }
     private void GameOver()
     {
@@ -61,6 +74,7 @@ public class GameManager : MonoBehaviour
     private void SetLives(int lives)
     {
         this.lives = lives;
+        Debug.Log("Set Lives");
     }
     public void GhostEaten(Ghost ghost)
     {
@@ -70,12 +84,15 @@ public class GameManager : MonoBehaviour
     }
     public void PacmanEaten()
     {
-        this.pacman.gameObject.SetActive(true);
+       
+        this.pacman.gameObject.SetActive(false);
 
-        SetLives(this.lives - 1);
+        SetLives(lives - 1);
+        Debug.Log("Mort");
 
-        if (this.lives > 0){
-            Invoke(nameof(ResetState), 3.0f);
+        if (lives > 0)
+        {
+            Invoke(nameof(ResetState), 3f);
         }
         else
         {
@@ -83,7 +100,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void PelletEaten(Pellet pellet)
+        public void PelletEaten(Pellet pellet)
     {
         pellet.gameObject.SetActive(false);
         SetScore(this.score + pellet.points);

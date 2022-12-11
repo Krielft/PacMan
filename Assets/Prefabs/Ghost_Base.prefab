@@ -403,8 +403,8 @@ GameObject:
   - component: {fileID: 8753843575506614548}
   - component: {fileID: 8753843575506614550}
   - component: {fileID: 8753843575506614553}
-  - component: {fileID: 8753843575506614554}
   - component: {fileID: 8753843575506614555}
+  - component: {fileID: 8753843575506614554}
   - component: {fileID: 6295234583551363049}
   - component: {fileID: 38189517600304585}
   - component: {fileID: 4886023804325596729}
@@ -472,19 +472,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &8753843575506614554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8753843575506614551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72ef14756ff8e2943bdb866c7654bb59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  points: 200
 --- !u!114 &8753843575506614555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +495,26 @@ MonoBehaviour:
   nextDirection: {x: 0, y: 0}
   startingPosition: {x: 0, y: 0, z: 0}
   position: {x: 0, y: -8.5}
+--- !u!114 &8753843575506614554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8753843575506614551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ef14756ff8e2943bdb866c7654bb59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movement: {fileID: 0}
+  home: {fileID: 0}
+  scatter: {fileID: 0}
+  chase: {fileID: 0}
+  frightened: {fileID: 0}
+  initialBehavior: {fileID: 0}
+  target: {fileID: 0}
+  points: 200
 --- !u!114 &6295234583551363049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -520,6 +527,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f5aae6ee8b5504c88d3db14a495456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghosts: {fileID: 0}
+  duration: 0
 --- !u!114 &38189517600304585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -532,6 +541,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 836cf576528797a4e8a6a484e5f916c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghosts: {fileID: 0}
+  duration: 0
 --- !u!114 &4886023804325596729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,6 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0864ae1eed370b444a9f05f886c838a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghosts: {fileID: 0}
+  duration: 0
 --- !u!114 &1305940874073598767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -556,3 +569,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df1c3a300e9c0da4c97c4d400dd106eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ghosts: {fileID: 0}
+  duration: 0

@@ -60,14 +60,14 @@
     <Compile Include="Assets\Scripts\Movement.cs" />
     <Compile Include="Assets\Scripts\Pacman.cs" />
     <Compile Include="Assets\Scripts\Pellet.cs" />
+    <Compile Include="Assets\Scripts\GhostChase.cs" />
+    <Compile Include="Assets\Scripts\GhostScatter.cs" />
     <Compile Include="Assets\Scripts\Passage.cs" />
     <Compile Include="Assets\Scripts\AnimatedSprite.cs" />
     <Compile Include="Assets\Scripts\Ghost.cs" />
     <Compile Include="Assets\Scripts\GhostBehaviour.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\PowerPellet.cs" />
-    <Compile Include="Assets\Scripts\GhostScatter.cs" />
-    <Compile Include="Assets\Scripts\GhostChase.cs" />
     <Compile Include="Assets\Scripts\GhostFrightened.cs" />
   </ItemGroup>
   <ItemGroup>
