@@ -7,10 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38189517600304585, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1323506834026586337, guid: ba5efe835eca17242b7600d78d986225, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 7391304e6dcdc594484288107bfd217f, type: 3}
+    - target: {fileID: 4886023804325596729, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5963619865199733271, guid: ba5efe835eca17242b7600d78d986225, type: 3}
       propertyPath: m_Color.b
       value: 0.23018867
@@ -71,5 +79,24 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ghost_Clyde
       objectReference: {fileID: 0}
+    - target: {fileID: 8753843575506614554, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+      propertyPath: initialBehavior
+      value: 
+      objectReference: {fileID: 3198519856489522840}
+    - target: {fileID: 8753843575506614555, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+      propertyPath: direction.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+--- !u!114 &3198519856489522840 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6295234583551363049, guid: ba5efe835eca17242b7600d78d986225, type: 3}
+  m_PrefabInstance: {fileID: 8880612880052003185}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7f5aae6ee8b5504c88d3db14a495456, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
